@@ -107,3 +107,21 @@ freshmart-main/
 
 ## Developers
 - **Mallampati Sumanth** - *Calibo Training (January Use Case)*
+
+## Demo Accounts
+
+The database comes populated with several demo users (password is `password123` for all):
+
+| Username | Email | Persona |
+|----------|-------|---------|
+| `john_doe` | john@example.com | General Shopper |
+| `jane_smith` | jane@example.com | Health & Beauty |
+| `bob_wilson` | bob@example.com | Meat & Seafood |
+| `alice_brown` | alice@example.com | Bakery fan |
+| `charlie_davis` | charlie@example.com | Snack lover |
+
+To create an admin account:
+```bash
+cd backend
+python manage.py createsuperuser
+```
