@@ -23,6 +23,24 @@ FreshMart is a full-stack e-commerce application developed as part of the **Cali
 - Product Inventory Control.
 - Kiosk Performance Monitoring.
 
+## 🌟 Unique Features & Innovations
+
+### 📦 Smart Product Packages & Bundles
+FreshMart includes a dynamic **Promotion Engine** that creates value packages for customers:
+- **Category Bundles**: Automated discounts when buying from specific categories (e.g., "Dairy Week Special").
+- **Seasonal Packages**: Time-limited offers grouping relevant products.
+- **Smart upsell**: The recommendation engine suggests complementary items to create a "complete package" for the shopper.
+
+### 🧠 AI-Powered Recommendation Engine
+Our custom built engine (`backend/recommendations/engine.py`) drives sales by:
+- **Collaborative Filtering**: "Users who bought X also bought Y".
+- **History Analysis**: Personalized suggestions based on past behavior.
+- **Preference Matching**: Direct mapping of user tastes (Vegan, Gluten-free) to products.
+
+### 🚀 Hybrid Architecture
+- **Dual-Mode API**: Served by a single Django backend but optimized for two distinct frontend flows (Auth-based Web vs Session-based Kiosk).
+- **Resilient Connectivity**: Kiosk mode is designed to handle high-traffic in-store usage with optimized local state management.
+
 ## Tech Stack
 
 - **Frontend**: React 18, Vite, Chakra UI, Axios.
