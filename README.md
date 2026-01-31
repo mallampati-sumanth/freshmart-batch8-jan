@@ -28,6 +28,7 @@ FreshMart is a full-stack e-commerce application developed as part of the **Cali
 ### 📦 Smart Product Packages & Bundles
 FreshMart includes a dynamic **Promotion Engine** that creates value packages for customers:
 - **Category Bundles**: Automated discounts when buying from specific categories (e.g., "Dairy Week Special").
+- **Family Packages**: "Mega Family Value Pack" bundles essentials (Milk, Bread, Fresh Produce) for a simplified one-click weekly shop.
 - **Seasonal Packages**: Time-limited offers grouping relevant products.
 - **Smart upsell**: The recommendation engine suggests complementary items to create a "complete package" for the shopper.
 

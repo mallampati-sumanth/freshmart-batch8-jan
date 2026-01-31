@@ -358,3 +358,20 @@ class Command(BaseCommand):
             )
             if created:
                 promotion.categories.add(category_dict[data['category']])
+
+        # Create Family Value Package (Bundle)
+        family_promo, created = Promotion.objects.get_or_create(
+            title='Mega Family Value Pack',
+            defaults={
+                'description': 'The ultimate weekly supply: Includes Milk, Bread, Eggs, and Fresh Produce. Perfect for families!',
+                'discount_percentage': 25.00,
+                'start_date': timezone.now(),
+                'end_date': timezone.now() + timedelta(days=30),
+                'is_active': True,
+            }
+        )
+        if created:
+            # Add multiple categories to this single promotion to create a "bundle" effect
+            for cat_name in ['Dairy & Eggs', 'Bakery', 'Fresh Produce']:
+                if cat_name in category_dict:
+                    family_promo.categories.add(category_dict[cat_name])
