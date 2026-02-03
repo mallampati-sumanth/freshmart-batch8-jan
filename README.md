@@ -90,12 +90,29 @@ freshmart-main/
    pip install -r requirements.txt
    ```
 
-4. Run Migrations:
+4. Set up environment variables:
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env
+   
+   # Edit .env and add your credentials:
+   # - SECRET_KEY: Generate a new Django secret key
+   # - EMAIL_HOST_USER: Your Gmail address
+   # - EMAIL_HOST_PASSWORD: Your Gmail app-specific password
+   ```
+   
+   **Important Security Note**: 
+   - Never commit `.env` files to version control
+   - Use environment-specific values for production
+   - Generate a strong SECRET_KEY for production environments
+   - Use Gmail App Passwords (not regular password) for EMAIL_HOST_PASSWORD
+
+5. Run Migrations:
    ```bash
    python manage.py migrate
    ```
 
-5. Start the Server:
+6. Start the Server:
    ```bash
    python manage.py runserver
    ```
